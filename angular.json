@@ -26,7 +26,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../test-angular/node_modules/jquery/dist/jquery.slim.min.js",
+              "../test-angular/node_modules/popper.js/dist/umd/popper.min.js",
+              "../test-angular/node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
