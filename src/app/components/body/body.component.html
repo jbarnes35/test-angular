@@ -1,0 +1,21 @@
+<div class="row row1">
+<div class="col-3 col3" *ngFor="let staff of staffs ;let i = index">
+    <div class="thumbnail">
+      <a href="/w3images/lights.jpg">
+        <img
+          src="https://thisiscoolads.files.wordpress.com/2013/06/b7fee-coca-cola-split-can-hed-2013.jpg?w=640&h=360"
+          alt="Lights" style="width:100%">
+        <div class="caption">
+          
+            <span>
+              {{staff.id}} - {{i}}
+              {{staff.name}}
+              {{staff.age}}
+              {{staff.department}}
+            </span>
+
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

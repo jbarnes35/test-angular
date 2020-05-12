@@ -1,0 +1,11 @@
+.row1{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+     
+    margin-right: -2px;
+    margin-left: -1px;
+}
+.col3{
+    padding-top: 20px;
+}

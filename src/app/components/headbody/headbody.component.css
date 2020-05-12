@@ -1,0 +1,8 @@
+.box1{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 20px;
+    margin-right: -2px;
+    margin-left: -1px;
+}
