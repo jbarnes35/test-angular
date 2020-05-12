@@ -1,0 +1,29 @@
+.sidenav{
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+.sidenav ul{    
+    list-style: none;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;  
+}
+
+.sidenav li{
+    width: initial;
+    border: 1px;
+    font-size: 1em;
+    line-height: 25px;
+}
+.sidenav a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding-left: 15px;
+}
+.sidenav  a:hover{
+    background-color: #c0c0c0;
+    border-bottom: 1px solid #888;
+}

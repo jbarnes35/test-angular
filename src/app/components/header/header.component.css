@@ -1,36 +1,25 @@
 
-
-
-.sidenav h4{
-    background: red;
-}
-.menu{
-    text-align: center;
-    line-height: 40px;
-}
-
-.sidenav{
+.nav{
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #444;
 }
-.sidenav ul{
-    
+.nav ul{
+    display: inline-flex;
     list-style: none;
     background-color: #444;
     text-align: center;
     margin: 0;
     padding: 0;  
 }
-.sidenav li{
-    width: 280px;
+.nav li{
+    width: 150px;
     border: 1px;
     font-size: 1.2em;
     line-height: 40px;
     text-align: left;
 }
-
-.sidenav a{
+.nav a{
     text-decoration: none;
     color: #ff0000;
     display: block;
@@ -38,41 +27,38 @@
     border-bottom: 1px solid #888;
     transition: .3s;
 }
-.sidenav  a:hover{
+.nav a:hover{
     background-color: #005f5f;
 
 }
-.sidenav  a:active{
+.nav a:active{
     background-color: #aaa;
     color: #444;
     cursor: default;
 }
 
-.sidenav  li li {
+.nav li li {
     font-size: .8em;
 }
 
-.sidenav  a{
+.nav a{
     border-bottom: none;
 }
-.sidenav  >ul>li{
+.nav >ul>li{
     text-align: center;
 }
-.sidenav  >ul>li>a{
+.nav >ul>li>a{
     padding-left: 0;
 }
-.sidenav  li ul{
+.nav li ul{
     position: absolute;
     display: none;
     width: inherit;
-    top: auto;
-    left: 100%;
-    z-index: 1;
 }
-.sidenav  li:hover ul{
+.nav li:hover ul{
     display: block;
 }
 
-.sidenav  li ul li{
+.nav li ul li{
     display: block;
 }
