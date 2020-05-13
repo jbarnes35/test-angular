@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-foot',
@@ -10,7 +11,6 @@ export class FootComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $ (document).ready (function () {
       var menu = $ ('.menu');
       var hamburger = $ ('.hamburger');
       var line = $ ('.line');
@@ -48,7 +48,6 @@ export class FootComponent implements OnInit {
           toggleMenu ();
         },
       });
-    });
   }
 
 }
