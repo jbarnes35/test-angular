@@ -1,4 +1,4 @@
-<div class="hamburger">
+<!--<div class="hamburger">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
@@ -10,3 +10,22 @@
 </div>
 
 
+<ul class="list-group">
+    <li class="list-group-item active">Get json string data from File </li>
+    <li class="list-group-item" *ngFor="let result of results">
+      {{ result.id }}
+      {{ result.name }}
+      ราคา {{ result.price }} บาท
+    </li>
+  </ul>-->
+
+  <div class="App">
+    
+    <div class="flex-container">
+      <ng-container *ngFor="let star of stars">
+        <app-allbody [starId]="star" [rating]="hoverState || rating" (enter)="enter($event)" (leave)="leave($event)"
+          (bigClick)="updateRating(star)">
+        </app-allbody>
+      </ng-container>
+    </div>
+  </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import $ from 'jquery';
+
+
+
 
 @Component({
   selector: 'app-foot',
@@ -8,46 +10,51 @@ import $ from 'jquery';
 })
 export class FootComponent implements OnInit {
 
-  constructor() { }
+  title = "star-angular";
+  stars = [1, 2, 3, 4, 5];
+  rating = 0;
+  hoverState = 0;
 
-  ngOnInit(): void {
-      var menu = $ ('.menu');
-      var hamburger = $ ('.hamburger');
-      var line = $ ('.line');
-      var menuopen;
-    
-      function openMenu () {
-        menu.css ('left', '0px');
-        line.css ('background', '#fff');
-        menuopen = true;
-      }
-      function closeMenu () {
-        menu.css ('left', '-320px');
-        line.css ('background', '#bcad90');
-        menuopen = false;
-      }
-      function toggleMenu () {
-        if (menuopen) {
-          closeMenu ();
-        } else {
-          openMenu ();
-        }
-      }
-      hamburger.on ({
-        mouseenter: function () {
-          openMenu ();
-        },
-      });
-      menu.on ({
-        mouseleave: function () {
-          closeMenu ();
-        },
-      });
-      hamburger.on ({
-        click: function () {
-          toggleMenu ();
-        },
-      });
+  enter(i) {
+    this.hoverState = i;
   }
 
+  leave() {
+    this.hoverState = 0;
+  }
+
+  updateRating(i) {
+    this.rating = i;
+  }
+
+
+  //public results:any;// กำหนดตัวแปร เพื่อรับค่า
+
+  // Inject HttpClient มาใช้ใน component หรือ service.
+  //constructor(private http:HttpClient) { }
+
+  constructor( ) { }
+  
+
+  
+
+  ngOnInit() {
+
+    
+  }
+
+  // ngOnInit() {
+  // ทำการเรียกใช้ HTTP request ผ่าน get() method 
+  // ซึ่งจะได้ข้อมูลกลับมาในรูปแบบ Observable เราต้อง subscibe ตัว observer จึงจะทำงาน
+  // พอรอค่าที่จะถูกส่งกลับมาแล้วทำงาน
+  //this.http.get('/assets/data/data2.json').subscribe(data => {
+  // อ่านค่า result จาก JSON response ที่ส่งออกมา
+  // this.results = data;
+  //});    
+  // }
+
+
+
+
 }
+

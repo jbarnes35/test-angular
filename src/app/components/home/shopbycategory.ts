@@ -1,10 +1,7 @@
-export class Staff {
+export class Shopbycategory {
     constructor(
         public id: number,
         public name: string,
-        public department: string,
-        public age?: number,
         public img?: string
       ) {  }
 }
-

@@ -76,3 +76,7 @@
 .sidenav  li ul li{
     display: block;
 }
+
+.card-body{
+    background: #f5f5f5;
+}

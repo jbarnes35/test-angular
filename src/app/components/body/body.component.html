@@ -1,21 +1,79 @@
-<div class="row row1">
-<div class="col-3 col3" *ngFor="let staff of staffs ;let i = index">
-    <div class="thumbnail">
-      <a href="/w3images/lights.jpg">
-        <img
-          src="https://thisiscoolads.files.wordpress.com/2013/06/b7fee-coca-cola-split-can-hed-2013.jpg?w=640&h=360"
-          alt="Lights" style="width:100%">
-        <div class="caption">
-          
-            <span>
-              {{staff.id}} - {{i}}
-              {{staff.name}}
-              {{staff.age}}
-              {{staff.department}}
-            </span>
+<div class="container">
+  <div class="row">
+    <div class="container1">
+      <div class="row rowhome">
 
+        <div class="col-sm3 cok" *ngFor="let result of results | slice:pointStart:pointEnd;let i=index">
+          <div class="thumbnail">
+            <a href="/w3images/lights.jpg">
+              <img
+                src="https://4.bp.blogspot.com/-FcwpXyPMkOY/W6DqNGLPapI/AAAAAAAAFHE/Acxd3pQMXVolN-9B7npYc3KMLHFS3PhEwCLcBGAs/s1600/%25E0%25B8%2594%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%2599%25E0%25B9%258C%25E0%25B9%2582%25E0%25B8%25AB%25E0%25B8%25A5%25E0%25B8%2594%2B%25282%2529.jpg"
+                alt="Lights" style="width:100%;height: 189px;">
+              <div class="card-jfy-title">
+                <div class="title">
+                  <span [routerLink]="['/article',result.id]" [queryParams]="{page: activePage}">
+                    {{ ((activePage-1)*perPage) + (i+1) }}
+
+                    {{ result.title }}
+
+
+                  </span>
+
+                </div>
+              </div>
+              <div class="hp-mod-price">
+
+
+                <div class="hp-mod-price-first-line">
+                  <span class="currency">฿</span><span class="price">27.00</span>
+                </div>
+
+                <div class="hp-mod-price-second-line"><span class="hp-mod-price-text align-left">
+                    <span class="currency">฿</span><span class="price">48.00</span>
+                  </span>
+                  <span class="hp-mod-discount align-left"> -44%</span>
+                </div>
+                <div class="card-jfy-footer">
+
+                  <div class="card-jfy-ratings">
+                    
+
+                  </div>
+                  <div class="card-jfy-ratings-comment">(440)</div>
+
+
+                </div>
+
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </div>
+
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" [routerLink]="['/body']" [queryParams]="{page: 1}"> First</a>
+    </li>
+    <li class="page-item" [class.disabled]="activePage==1">
+      <a class="page-link" [routerLink]="['/body']" [queryParams]="{page: prevPage}"> Previous</a>
+    </li>
+    <li class="page-item" *ngFor="let i of iPage" [class.active]="activePage==i">
+      <a class="page-link" [routerLink]="['/body']" [queryParams]="{page: i}"> {{ i }} </a>
+    </li>
+    <li class="page-item" [class.disabled]="activePage==totalPage">
+      <a class="page-link" [routerLink]="['/body']" [queryParams]="{page: nextPage}"> Next</a>
+    </li>
+    <li class="page-item">
+      <input #pageInput type="number" class="form-control" min="1" max="{{ totalPage }}" style="width:80px;"
+        (input)="changePage(pageInput.value)" value="{{ activePage }}" />
+    </li>
+    <li class="page-item">
+      <a class="page-link" [routerLink]="['/body']" [queryParams]="{page: totalPage}"> Last</a>
+    </li>
+  </ul>
+</nav>

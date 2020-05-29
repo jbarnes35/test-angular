@@ -27,7 +27,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../test-angular/src/scrip.js",
+              
               "../test-angular/node_modules/jquery/dist/jquery.slim.min.js",
               "../test-angular/node_modules/popper.js/dist/umd/popper.min.js",
               "../test-angular/node_modules/bootstrap/dist/js/bootstrap.min.js"
