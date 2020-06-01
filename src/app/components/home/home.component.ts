@@ -32,7 +32,6 @@ Shopbycategory = new Shopbycategory(1,'',''); // ให้เป็นค่า�
    }
 
   ngOnInit(): void {
-    console.log(this.Shopbycategorys)
     this.test.snapshotChanges().pipe(map(changes=>
         changes.map(c => ({key:c.payload.key,...c.payload.val()}))
       )).subscribe(shop=>
