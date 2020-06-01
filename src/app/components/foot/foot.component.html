@@ -23,7 +23,7 @@
     
     <div class="flex-container">
       <ng-container *ngFor="let star of stars">
-        <app-allbody [starId]="star" [rating]="hoverState || rating" (enter)="enter($event)" (leave)="leave($event)"
+        <app-allbody [starId]="star" [rating]="hoverState || rating" (enter)="enter($event)" (leave)="leave()"
           (bigClick)="updateRating(star)">
         </app-allbody>
       </ng-container>
